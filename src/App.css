@@ -1,0 +1,145 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.fc-scroller::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.fc-scroller:hover::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.fc-scroller:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 4px;
+}
+
+
+.fc-event {
+  background-color: #6366f1; 
+  border: none !important;
+  color: #fff !important;
+  font-size: 0.85rem;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.fc-event:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+.fc-toolbar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.fc .fc-button {
+  background-color: #3b82f6;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.fc .fc-button-primary:focus {
+  box-shadow: none;
+}
+
+.fc .fc-button-primary:active {
+  box-shadow: none !important;
+}
+
+.fc .fc-button:hover {
+  background-color: #2563eb;
+}
+
+.fc-col-header-cell a{
+  color: #333;
+  font-weight: bold;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #828687 !important;
+}
+
+.fc-prev-button fc-button fc-button-primary:focus{
+  border: none
+}
+
+.fc .fc-daygrid-more-link {
+  color: black
+}
+
+.fc .fc-popover-title{
+  color: black;
+}
+
+.fc-icon-x::before {
+  color: black;
+}
+
+.fc .fc-more-popover .fc-popover-body {
+  max-height: 12.5rem;
+  overflow-y: auto;
+}
+
+.fc-dayGridMonth-button:focus {
+  box-shadow: none !important;
+}
+
+.fc-dayGridMonth-button:active {
+  box-shadow: none !important;
+}
+.fc-timeGridWeek-button:focus {
+  box-shadow: none !important;
+}
+
+.fc-timeGridWeek-button:active {
+  box-shadow: none !important;
+}
+.fc-timeGridDay-button:focus {
+  box-shadow: none !important;
+}
+
+.fc-timeGridDay-button:active {
+  box-shadow: none !important;
+}
+
+@media (max-width: 600px) {
+  .fc-header-toolbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .fc-header-toolbar .fc-toolbar-chunk {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .fc .fc-button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .fc-col-header-cell-cushion {
+    font-size: 0.75rem;
+  }
+
+  .fc-event .fc-event-main{
+    font-size: 0.75rem;
+  }
+}
+
+
