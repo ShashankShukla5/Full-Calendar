@@ -21,7 +21,6 @@
   border-radius: 4px;
 }
 
-
 .fc-event {
   background-color: #6366f1; 
   border: none !important;
@@ -140,6 +139,14 @@
   .fc-event .fc-event-main{
     font-size: 0.75rem;
   }
+}
+
+.fc-timegrid-axis-frame {
+  color: black !important;
+}
+
+.fc-timegrid-slot-label-frame {
+  color: black !important;
 }
 
 
