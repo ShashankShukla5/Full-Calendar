@@ -114,6 +114,10 @@
 }
 
 @media (max-width: 600px) {
+  .calendar{
+    width: 90%
+  }
+
   .fc-header-toolbar {
     flex-direction: column;
     align-items: center;

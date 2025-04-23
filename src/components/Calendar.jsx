@@ -29,8 +29,8 @@ function Calendar() {
   }
 
   function deleteEventById(id) {
-    if(window.confirm(`Do you want delete?`)){
-      deleteEvent(id)
+    if (window.confirm(`Do you want delete?`)) {
+      deleteEvent(id);
     }
   }
 
@@ -53,7 +53,7 @@ function Calendar() {
   return (
     <div className="w-full h-full flex flex-col items-center gap-5">
       <h1 className="text-black">Full Calendar</h1>
-      <div className="w-[70%] bg-[#f3f3f3] p-7 rounded-2xl ">  
+      <div className="calendar w-[70%] bg-[#f3f3f3] p-7 rounded-2xl ">
         <FullCalendar
           height="auto"
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -61,7 +61,7 @@ function Calendar() {
           headerToolbar={{
             left: "prev,next today",
             center: "title",
-            right: "dayGridMonth,timeGridWeek,timeGridDay"
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
           }}
           editable={true}
           selectable={true}
@@ -70,6 +70,12 @@ function Calendar() {
           dateClick={handleDateClick}
           eventContent={renderEventContent}
           dayMaxEventRows={2}
+          nowIndicator={true}
+          eventInteractive= {true}
+          businessHours={true}
+          // weekNumbers={true}
+          // dragScroll={true}
+          // selectMirror={true}
         />
       </div>
     </div>
