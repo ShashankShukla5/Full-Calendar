@@ -7,6 +7,7 @@ import { store } from "../store/store";
 import { RxCross2 } from "react-icons/rx";
 
 function Calendar() {
+  const addEventPop = store((state) => state.addEventPop);
   const toggleAddEventPop = store((state) => state.toggleAddEventPop);
   const events = store((state) => state.events);
   const setStartDate = store((state) => state.setStartDate);
@@ -51,7 +52,7 @@ function Calendar() {
 
   // [&_.fc-col-header-cell-cushion]:text-xs
   return (
-    <div className="w-full h-full flex flex-col items-center gap-5">
+    <div className={`w-full h-full flex flex-col items-center gap-5 ${addEventPop ? "pointer-events-none" : ""}`}>
       <h1 className="text-black">Full Calendar</h1>
       <div className="calendar w-[70%] bg-[#f3f3f3] p-7 rounded-2xl ">
         <FullCalendar
