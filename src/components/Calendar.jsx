@@ -5,6 +5,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { store } from "../store/store";
 import { RxCross2 } from "react-icons/rx";
+import { Switch } from "@/components/ui/switch";
 
 function Calendar() {
   const addEventPop = store((state) => state.addEventPop);
@@ -50,11 +51,24 @@ function Calendar() {
     );
   }
 
+  function toggleTheme() {
+    document.documentElement.classList.toggle("dark");
+  }
+
   // [&_.fc-col-header-cell-cushion]:text-xs
   return (
-    <div className={`w-full h-full flex flex-col items-center gap-5 ${addEventPop ? "pointer-events-none" : ""}`}>
-      <h1 className="text-black">Full Calendar</h1>
-      <div className="calendar w-[70%] bg-[#f3f3f3] p-7 rounded-2xl ">
+    <div
+      className={`relative pt-5 dark:bg-black w-full h-full flex flex-col items-center gap-5 ${
+        addEventPop ? "pointer-events-none" : ""
+      }`}
+    >
+      <div className="absolute right-7 flex items-center gap-3">
+        <Switch id="dark-mode" onCheckedChange={toggleTheme}/>
+        <label htmlFor="dark-mode">Dark Mode</label>
+      </div>
+
+      <h1 className="text-black dark:text-white">Full Calendar</h1>
+      <div className="calendar w-[70%] p-7 rounded-2xl ">
         <FullCalendar
           height="auto"
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
@@ -72,7 +86,7 @@ function Calendar() {
           eventContent={renderEventContent}
           dayMaxEventRows={2}
           nowIndicator={true}
-          eventInteractive= {true}
+          eventInteractive={true}
           businessHours={true}
           // weekNumbers={true}
           // dragScroll={true}

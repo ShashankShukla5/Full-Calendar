@@ -64,17 +64,17 @@ function PopAddEvent() {
     <form
     ref={popUpRef}
       onSubmit={handleSubmit(createNewEvent)}
-      className=" bg-gray-100 w-fit h-fit flex flex-col items-start py-5 px-10 gap-5 mt-30 rounded-xl"
+      className=" dark:bg-black bg-gray-100 w-fit h-fit flex flex-col items-start py-5 px-10 gap-5 mt-30 rounded-xl"
     >
       <div className="flex gap-2">
-        <label htmlFor="eventName" className="text-black">
+        <label htmlFor="eventName" className="text-black dark:text-white">
           Event Name:{" "}
         </label>
         <div className="flex flex-col items-start">
           <input
             type="text"
             id="eventName"
-            className={`bg-gray-200 rounded-md w-50 px-2 text-black focus:outline-none ${
+            className={`bg-gray-200 rounded-md w-50 px-2 text-black  focus:outline-none ${
               errors.title ? "border border-red-500" : ""
             }`}
             {...register("title", {
@@ -89,7 +89,7 @@ function PopAddEvent() {
         </div>
       </div>
       <div className="w-full flex justify-between">
-        <label htmlFor="startDate" className="text-black">
+        <label htmlFor="startDate" className="text-black dark:text-white">
           Start:{" "}
         </label>
         <div className="flex flex-col items-start">
@@ -112,7 +112,7 @@ function PopAddEvent() {
         </div>
       </div>
       <div className="w-full flex justify-between">
-        <label htmlFor="endDate" className="text-black">
+        <label htmlFor="endDate" className="text-black dark:text-white">
           End:{" "}
         </label>
         <input
